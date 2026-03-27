@@ -1,0 +1,415 @@
+{
+  "info": {
+    "_postman_id": "96a944d0-26c9-4c12-a1ba-a9aebe207a8a",
+    "name": "API_Gimnasio_Villastrigo_Sanz_Alejandro_DWES05_TE01",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "44924029"
+  },
+  "item": [
+    {
+      "name": "1. Endpoints de CLASES",
+      "item": [
+        {
+          "name": "1.1 Listar Clases",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/clases",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "clases"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "1.2 Ver Clase (ID 1)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/clases/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "clases",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "1.3 Crear Clase (ID 3)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"nombre\": \"CrossFit\", \"instructor\": \"Nerea\", \"capacidad_maxima\": 30, \"horario\": \"Lunes 17:30\"}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/clases",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "clases"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "1.4 Actualizar Clase (ID 3)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"nombre\": \"Zumba Pro\", \"instructor\": \"Bea\", \"capacidad_maxima\": 20, \"horario\": \"Miercoles 21:00\"}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/clases/3",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "clases",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "1.5 ELIMINAR Clase (ID 3 - Segura)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/clases/3",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "clases",
+                "3"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "2. Endpoints de RESERVAS",
+      "item": [
+        {
+          "name": "2.1 Listar Reservas",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/reservas",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "reservas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2.2 Ver Reserva (ID 1)",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/reservas/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "reservas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2.3 Crear Reserva (ID 5 - sobre Clase 1)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"usuario\": \"Marta\", \"gym_class_id\": 1, \"fecha\": \"2026-03-28\"}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/reservas",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "reservas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2.4 Actualizar Reserva (ID 1)",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"usuario\": \"Begoña S.\", \"gym_class_id\": 2, \"fecha\": \"2026-04-01\"}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/reservas/1",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "reservas",
+                "1"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "2.5 ELIMINAR Reserva (ID 5 - Segura)",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/reservas/5",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "reservas",
+                "5"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "3. Errores de Validación",
+      "item": [
+        {
+          "name": "Error: Clase Inexistente (999)",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"usuario\": \"Error\", \"gym_class_id\": 999, \"fecha\": \"2026-03-27\"}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/reservas",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "reservas"
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Error: Faltan Campos",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Accept",
+                "value": "application/json"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"usuario\": \"\", \"gym_class_id\": 1}"
+            },
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/reservas",
+              "protocol": "http",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "port": "8000",
+              "path": [
+                "api",
+                "reservas"
+              ]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
+}
